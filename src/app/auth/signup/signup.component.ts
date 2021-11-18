@@ -10,12 +10,13 @@ import { User } from 'src/app/user';
 })
 export class SignupComponent implements OnInit {
 
-  constructor(private signup:SignupService) { }
+  constructor(private signup: SignupService) { }
+  @ViewChild('f') registerForm: NgForm;
 
   ngOnInit(): void {
   }
-  @ViewChild('f') registerForm: NgForm;
 
+  // tslint:disable-next-line:typedef
   addNewUser() {
     const username = this.registerForm.value.username;
     const email = this.registerForm.value.email;
@@ -26,11 +27,11 @@ export class SignupComponent implements OnInit {
 
 
     this.signup
-      .createUser(new User(username,email,password,password2,first_name,last_name))
+      .createUser(new User(username, email, password, password2, first_name, last_name))
       .subscribe((data) => {
         console.log(data);
       });
-   
+
   }
 }
 
