@@ -1,0 +1,135 @@
+<header class="ll_header" [class.top-fixed]="topFixed" [ngClass]="{ 'bg-gray-50 shadow': topFixed && isScrolled }">
+    <div class="header-top">
+      <div class="container">
+          <div class="ht-left">
+          </div>
+          <div class="ht-right">
+           
+              <div class="lan-selector">
+                </div>
+
+          </div>
+      </div>
+  </div>
+  <div class="container">
+      <div class="inner-header">
+          <div class="row">
+              <div class="col-lg-2 col-md-2">
+                  <div>
+
+                  </div>
+              </div>
+              <div class="col-lg-7 col-md-7">
+                <div class="advanced-search">
+                    <button type="button" class="category-btn">All Categories</button>
+                    <div class="input-group">
+                        <input type="text" placeholder="What do you need?" />
+                        <button type="button"><i class="ti-search"></i></button>
+                    </div>
+                </div>
+            </div>
+              <div class="col-lg-3 text-right col-md-3">
+                  <ul class="nav-right">
+                      <li class="heart-icon">
+                          <a href="#">
+                              <i class="icon_heart_alt"></i>
+                              <span>1</span>
+                          </a>
+                      </li>
+                      <li class="cart-icon">
+                          <a href="#">
+                              <i class="icon_bag_alt"></i>
+                              <span>3</span>
+                          </a>
+                          <div class="cart-hover">
+                              <div class="select-items">
+                                  <table>
+                                      <tbody>
+                                          <tr>
+                                              <td class="si-pic"><img src="assets/img/select-product-1.jpg" alt="" /></td>
+                                              <td class="si-text">
+                                                  <div class="product-selected">
+                                                      <p>$60.00 x 1</p>
+                                                      <h6>Kabino Bedside Table</h6>
+                                                  </div>
+                                              </td>
+                                              <td class="si-close">
+                                                  <i class="ti-close"></i>
+                                              </td>
+                                          </tr>
+                                          <tr>
+                                              <td class="si-pic"><img src="assets/img/select-product-2.jpg" alt="" /></td>
+                                              <td class="si-text">
+                                                  <div class="product-selected">
+                                                      <p>$60.00 x 1</p>
+                                                      <h6>Kabino Bedside Table</h6>
+                                                  </div>
+                                              </td>
+                                              <td class="si-close">
+                                                  <i class="ti-close"></i>
+                                              </td>
+                                          </tr>
+                                      </tbody>
+                                  </table>
+                              </div>
+                              <div class="select-total">
+                                  <span>total:</span>
+                                  <h5>$120.00</h5>
+                              </div>
+                              <div class="select-button">
+                                  <a href="#" class="primary-btn view-card">VIEW CARD</a>
+                                  <a href="#" class="primary-btn checkout-btn">CHECK OUT</a>
+                              </div>
+                          </div>
+                      </li>
+                      <li class="cart-price">$150.00</li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="nav-item">
+      <div class="container">
+          <div class="nav-depart">
+              <div class="depart-btn">
+                  <i class="ti-menu"></i>
+                  <span>All departments</span>
+                  <ul class="depart-hover">
+                      <li class="active"><a href="#">Cars</a></li>
+                      <li><a href="#">Clothes</a></li>
+                      <li><a href="#">Electronics</a></li>
+                      <li><a href="#">Furniture</a></li>
+
+                  </ul>
+              </div>
+          </div>
+          <div id="mobile-menu-wrap"></div>
+      </div>
+  </div>
+</header>
+<header class="ll_header" [class.top-fixed]="topFixed" [ngClass]="{ 'bg-gray-50 shadow': topFixed && isScrolled }">
+  <div class="container">
+    <div class="flex items-center">
+      <div class="flex items-center">
+        <a class="logo" [routerLink]="['']"><img src="assets/images/logo.png" alt="Logo" /></a>
+        <ul class="flex item-center ml-5" *ngIf="!isLessThenLargeDevice && menuList && menuList.length">
+          <li *ngFor="let menu of menuList">
+            <a mat-button [routerLink]="[menu.path]" routerLinkActive="bg-gray-100" class="text-lg font-bold py-2 px-5">{{ menu.name }}</a>
+          </li>
+        </ul>
+      </div>
+      <button
+        *ngIf="isLessThenLargeDevice"
+        (click)="toggleSidenav.emit()"
+        class="_sidenav__toggler ml-auto md:ml-3 ms-sm-3"
+        mat-icon-button
+      >
+        <mat-icon>menu</mat-icon>
+      </button>
+      <div class="hidden items-center md:flex ml-auto">
+        <a [routerLink]="['/auth/login']" mat-raised-button color="warn" class="text-lg font-bold py-2 px-5">Login</a>
+        <a [routerLink]="['/auth/signup']" mat-raised-button color="accent" class="text-lg font-bold py-2 px-5 ml-2">Join Now</a>
+      </div>
+    </div>
+  </div>
+</header>
