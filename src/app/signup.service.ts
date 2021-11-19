@@ -11,7 +11,7 @@ export class SignupService{
 
   constructor(private httpClient: HttpClient) { }
   public fetchData(){  
-		return this.httpClient.get(`${this.SERVER_URL}/register`);  
+		return this.httpClient.get(`${this.SERVER_URL}register`);  
 	}  
   
   createUser(user: User) {
