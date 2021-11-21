@@ -7,6 +7,7 @@ import { SharedModule } from '../shared/shared.module';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { ProductHeroComponent } from './product-list/product-hero/product-hero.component';
+import { FormsModule } from '@angular/forms';
 // import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 
 @NgModule({
@@ -16,6 +17,7 @@ import { ProductHeroComponent } from './product-list/product-hero/product-hero.c
     ProductRoutingModule,
     SharedModule,
     MatExpansionModule,
+    FormsModule,
     NgParticlesModule,
     // NgxSkeletonLoaderModule
   ]
