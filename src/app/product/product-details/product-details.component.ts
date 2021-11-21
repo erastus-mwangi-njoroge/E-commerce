@@ -9,9 +9,11 @@ import { ProductsService } from 'src/app/products.service';
 })
 export class ProductDetailsComponent implements OnInit {
 
+
   constructor(private productservice: ProductsService) { }
 
   ngOnInit(): void {
+    
   }
   addlipanampesa(form: NgForm) {
     console.log(form.value);
