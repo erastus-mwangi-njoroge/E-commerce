@@ -10,9 +10,10 @@ import { SharedModule } from './shared/shared.module';
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 import { HttpClientModule } from '@angular/common/http';
 import { SearchproductsComponent } from './searchproducts/searchproducts.component';
+import { UserprofileComponent } from './userprofile/userprofile.component';
 
 @NgModule({
-  declarations: [AppComponent, SearchproductsComponent],
+  declarations: [AppComponent, SearchproductsComponent, UserprofileComponent],
   imports: [BrowserModule,FormsModule, AppRoutingModule, BrowserAnimationsModule, SharedModule, NgxSkeletonLoaderModule,HttpClientModule, ],
   providers: [],
   bootstrap: [AppComponent]

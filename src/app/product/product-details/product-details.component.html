@@ -1,32 +1,42 @@
 <div class="container" style="position: relative;margin-top: 300px;margin-bottom:200px">
-    <h1 style="text-align:center">Lipa na Mpesa</h1>
-    <form (ngSubmit)="addlipanampesa(f)" #f="ngForm">
-        <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">First Name</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="First_Name"
-                name="first_name" ngModel #first_name required>
-        </div>
-        <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Last Name</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Last_Name" 
-            name="last_name" ngModel #last_name required>
-        </div>
-        <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"
-            name="email" ngModel #email required>
-        </div>
-        <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Phone Number</label>
-            <input type="phone number" class="form-control" id="exampleFormControlInput1" placeholder="phone number"
-            name="phone_number" ngModel #phone number required>
-        </div>
-        <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Amount</label>
-            <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="amount"
-            name="amount" ngModel #amount required>
-        </div>
+    <div class="row">
+        <div class="col-md-6"style="position: relative;left:240px;box-shadow: 0px 5px 5px 5px rgba(207,210,188,0.75);">
+            <div class="card">
+                <div class="card-body" >
+                    <h1 style="text-align:center">Lipa na Mpesa</h1>
+                    <form (ngSubmit)="addlipanampesa(f)" #f="ngForm">
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">First Name</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1"
+                                placeholder="First_Name" name="first_name" ngModel #first_name required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Last Name</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1"
+                                placeholder="Last_Name" name="last_name" ngModel #last_name required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1"
+                                placeholder="name@example.com" name="email" ngModel #email required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Phone Number</label>
+                            <input type="phone number" class="form-control" id="exampleFormControlInput1"
+                                placeholder="phone number" name="phone_number" ngModel #phone number required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Amount</label>
+                            <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="amount"
+                                name="amount" ngModel #amount required>
+                        </div>
 
-        <button class="btn btn-primary btn-lg" type="submit" [disabled]="!f.valid">Submit</button>
-    </form>
-</div>
+                        <button class="btn btn-warning btn-lg" type="submit" [disabled]="!f.valid">Submit</button>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                </div>
+
+            </div>
+        </div>
+    </div>
