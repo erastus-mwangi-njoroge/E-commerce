@@ -1,6 +1,9 @@
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { Component, EventEmitter, HostListener, Input, OnInit, Output } from '@angular/core';
 import { menuList as staticMenuList } from '../../data/menus';
+import { ProductsService } from 'src/app/products.service';
+import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'll-header',
@@ -13,7 +16,7 @@ export class HeaderComponent implements OnInit {
   isScrolled: boolean;
   menuList = [];
   isLessThenLargeDevice;
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(private breakpointObserver: BreakpointObserver, private productservice: ProductsService,private router:Router) { }
 
   ngOnInit(): void {
     this.menuList = staticMenuList;
@@ -22,6 +25,14 @@ export class HeaderComponent implements OnInit {
     });
   }
 
+  addsearchproducts(form: NgForm) {
+    this.productservice.postsearchproducts(form.value).subscribe(res => {
+      console.log(res);
+      this.router.navigate(['/searchproducts']);
+      
+    });
+
+  }
   @HostListener('window:scroll', ['$event'])
   checkScroll() {
     this.isScrolled = window.pageYOffset > 15;

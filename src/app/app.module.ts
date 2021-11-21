@@ -9,9 +9,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 import { HttpClientModule } from '@angular/common/http';
+import { SearchproductsComponent } from './searchproducts/searchproducts.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, SearchproductsComponent],
   imports: [BrowserModule,FormsModule, AppRoutingModule, BrowserAnimationsModule, SharedModule, NgxSkeletonLoaderModule,HttpClientModule, ],
   providers: [],
   bootstrap: [AppComponent]

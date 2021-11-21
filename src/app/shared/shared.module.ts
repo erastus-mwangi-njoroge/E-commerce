@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
@@ -16,6 +17,7 @@ import { MatListModule } from '@angular/material/list';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { HttpClientModule } from '@angular/common/http';
 
+
 const commonModules = [
   HttpClientModule,
   MatToolbarModule,
@@ -24,7 +26,8 @@ const commonModules = [
   MatCardModule,
   MatProgressSpinnerModule,
   MatSidenavModule,
-  MatListModule
+  MatListModule,
+  FormsModule
 ];
 
 @NgModule({

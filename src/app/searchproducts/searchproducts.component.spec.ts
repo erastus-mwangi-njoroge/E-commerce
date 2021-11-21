@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DashboardProfileComponent } from './dashboard-profile.component';
+import { SearchproductsComponent } from './searchproducts.component';
 
-describe('DashboardProfileComponent', () => {
-  let component: DashboardProfileComponent;
-  let fixture: ComponentFixture<DashboardProfileComponent>;
+describe('SearchproductsComponent', () => {
+  let component: SearchproductsComponent;
+  let fixture: ComponentFixture<SearchproductsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DashboardProfileComponent ]
+      declarations: [ SearchproductsComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DashboardProfileComponent);
+    fixture = TestBed.createComponent(SearchproductsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
