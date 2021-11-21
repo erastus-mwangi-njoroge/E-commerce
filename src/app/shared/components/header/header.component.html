@@ -23,7 +23,7 @@
                     <div class="advanced-search">
                         <div class="input-group text-dark">
                             <form (ngSubmit)="addsearchproducts(f)" #f="ngForm">
-                                <input type="text" placeholder="What do you need?" name="name" style="color: black;" />
+                                <input type="text" placeholder="Search by product..." name="name" style="color: black;" ngModel #name required />
                                 <button type="submit"><i class="ti-search"></i></button>
                             </form>
                         </div>

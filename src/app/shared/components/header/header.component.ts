@@ -29,7 +29,6 @@ export class HeaderComponent implements OnInit {
     this.productservice.postsearchproducts(form.value).subscribe(res => {
       console.log(res);
       this.router.navigate(['/searchproducts']);
-      
     });
 
   }
