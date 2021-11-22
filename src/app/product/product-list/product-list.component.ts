@@ -1,6 +1,6 @@
 import { ProductsService } from './../../products.service';
 import { Component, OnInit } from '@angular/core';
-import { productsDB } from '../../shared/data/products';
+
 
 @Component({
   selector: 'll-product-list',
