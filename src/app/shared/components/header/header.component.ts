@@ -25,6 +25,10 @@ export class HeaderComponent implements OnInit {
       this.isLessThenLargeDevice = matches;
     });
   }
+  onsignup() {
+    this.router.navigate(['/login']);
+  }
+
 
   loggedin() {
     return localStorage.getItem('token');
