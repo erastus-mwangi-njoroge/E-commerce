@@ -23,6 +23,7 @@ export class ProductsService {
   }
   postsearchproducts(data) {
     return this.http.post('https://backend-store-api.herokuapp.com/api/products-search/', { data });
+    return this.http.post('https://backend-store-api.herokuapp.com/api/products-search/', data );
   }
   postsendconfirmationsms(phone_number, message) {
     return this.http.post('https://backend-store-api.herokuapp.com/send_message/',
