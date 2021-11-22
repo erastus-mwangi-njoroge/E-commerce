@@ -16,4 +16,8 @@ export const menuList: Menu[] = [
     path: '/contact',
     name: 'Contact'
   },
+  {
+  path: '/userprofile',
+  name: 'My Account'
+},
 ];
