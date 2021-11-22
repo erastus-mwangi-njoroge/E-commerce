@@ -22,6 +22,7 @@ export class ProductsService {
     return this.http.post('https://backend-store-api.herokuapp.com/api/c2b/register/', data);
   }
   postsearchproducts(data) {
+    return this.http.post('https://backend-store-api.herokuapp.com/api/products-search/', { data });
     return this.http.post('https://backend-store-api.herokuapp.com/api/products-search/', data );
   }
   postsendconfirmationsms(phone_number, message) {
