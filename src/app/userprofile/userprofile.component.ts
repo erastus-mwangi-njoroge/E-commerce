@@ -1,15 +1,29 @@
 import { Component, OnInit } from '@angular/core';
+import { UserprofileService } from './../userprofile.service';
 
 @Component({
-  selector: 'app-userprofile',
+  selector: 'll-userprofile',
   templateUrl: './userprofile.component.html',
   styleUrls: ['./userprofile.component.scss']
 })
 export class UserprofileComponent implements OnInit {
-
-  constructor() { }
+  isLoaded: boolean;
+  advanceSearchExpanded: boolean = false;
+  userprofiles;
+  constructor(private UserprofileService: UserprofileService) { }
 
   ngOnInit(): void {
+    setTimeout(() => {
+      this.isLoaded = true
+    }, 8000)
+    this.getProfile();
+  }
+  getProfile() {
+      this.UserprofileService.getProfile().subscribe(data => {
+    this.userprofiles = data;
+    this.userprofiles = this.userprofiles.results
+    console.log(this.userprofiles);
+      })
+    }
   }
 
-}
