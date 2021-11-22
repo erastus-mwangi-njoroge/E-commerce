@@ -2,7 +2,6 @@ import { Component, OnInit,ViewChild } from '@angular/core';
 import { LoginService } from 'src/app/login.service';
 import { NgForm } from '@angular/forms';
 import { Userlogin } from 'src/app/userlogin';
-import { Router } from '@angular/router'; 
 
 @Component({
   selector: 'll-login',
@@ -12,7 +11,7 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
 
  
-  constructor(private login:LoginService, private router: Router) { }
+  constructor(private login:LoginService) { }
 
   ngOnInit(): void {
   }
@@ -27,8 +26,9 @@ export class LoginComponent implements OnInit {
     
         this.login
           .createUserlogin(new Userlogin(username,password))
-          .subscribe((data) => this.router.navigate(['/'], { 'queryParams': data })
-          );
+          .subscribe((data) => {
+            console.log(data);
+          });
        
       }
       

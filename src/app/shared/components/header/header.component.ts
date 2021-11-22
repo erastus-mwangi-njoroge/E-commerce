@@ -1,3 +1,4 @@
+import { AuthenticationService } from 'src/app/authentication.service';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { Component, EventEmitter, HostListener, Input, OnInit, Output } from '@angular/core';
 import { menuList as staticMenuList } from '../../data/menus';
@@ -16,13 +17,21 @@ export class HeaderComponent implements OnInit {
   isScrolled: boolean;
   menuList = [];
   isLessThenLargeDevice;
-  constructor(private breakpointObserver: BreakpointObserver, private productservice: ProductsService,private router:Router) { }
+  constructor(private breakpointObserver: BreakpointObserver, private productservice: ProductsService,private router:Router, private authenticationService:AuthenticationService) { }
 
   ngOnInit(): void {
     this.menuList = staticMenuList;
     this.breakpointObserver.observe(['(max-width: 1199px)']).subscribe(({ matches }) => {
       this.isLessThenLargeDevice = matches;
     });
+  }
+
+  loggedin() {
+    return localStorage.getItem('token');
+  }
+  onlogout() {
+    localStorage.removeItem('token');
+    // this.router.navigate(['/login']);
   }
 
   addsearchproducts(form: NgForm) {

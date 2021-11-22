@@ -53,12 +53,23 @@
                         </form>
                     </div>
                 </div>
-            <div class="hidden items-center md:flex ml-auto">
-                <a [routerLink]="['/auth/login']" mat-raised-button color="warn"
-                    class="text-lg font-bold ">Login</a>
-                <a [routerLink]="['/auth/signup']" mat-raised-button color="accent"
-                    class="text-lg font-bold mx-3">Register</a>
-            </div>
+                <div  class="hidden items-center md:flex ml-auto">
+                
+               
+                    <a *ngIf="!loggedin()" [routerLink]="['/auth/signup']" mat-raised-button color="accent"
+               class="text-lg font-bold mx-3">Register</a>
+               
+
+               
+                   <a *ngIf="!loggedin()" [routerLink]="['/auth/login']" mat-raised-button color="warn"
+               class="text-lg font-bold ">Login</a>
+               
+              
+                <a *ngIf="loggedin()" (click)="onlogout()" [routerLink]="['/auth/logout']" mat-raised-button color="warn"
+                class="text-lg font-bold ">Logout</a>
+             
+              
+           </div>
         </div>
     </div>
 </header>
