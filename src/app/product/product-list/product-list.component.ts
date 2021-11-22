@@ -37,4 +37,19 @@ export class ProductListComponent implements OnInit {
       console.log(this.products);
     })
 }
+  postlipanampesa(data) {
+  this.ProductsService.postlipanampesa(data).subscribe(data => {
+    this.products = data;
+    this.products = this.products.results
+    console.log(this.products);
+  })
+}
+postsearchproduct(data) {
+  this.ProductsService.postsearchproducts(data).subscribe(data => {
+    this.products = data;
+    this.products = this.products.results
+    console.log(this.products);
+  })
+}
+
 }
