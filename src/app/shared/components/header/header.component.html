@@ -1,32 +1,10 @@
 <header class="ll_header" [class.top-fixed]="topFixed" [ngClass]="{ 'bg-gray-50 shadow': topFixed && isScrolled }">
-    <div class="header-top">
-        <div class="container">
-            <div class="ht-left">
-            </div>
-            <div class="ht-right">
-
-                <div class="lan-selector">
-                </div>
-
-            </div>
-        </div>
-    </div>
     <div class="container">
         <div class="inner-header">
             <div class="row">
                 <div class="col-lg-2 col-md-2">
                     <div>
 
-                    </div>
-                </div>
-                <div class="col-lg-7 col-md-7">
-                    <div class="advanced-search">
-                        <div class="input-group text-dark">
-                            <form (ngSubmit)="addsearchproducts(f)" #f="ngForm">
-                                <input type="text" placeholder="What do you need?" name="name" style="color: black;" />
-                                <button type="submit"><i class="ti-search"></i></button>
-                            </form>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -64,14 +42,6 @@
                 </ul>
             </div>
             <button *ngIf="isLessThenLargeDevice" (click)="toggleSidenav.emit()"
-                class="_sidenav__toggler ml-auto md:ml-3 ms-sm-3" mat-icon-button>
-                <mat-icon>menu</mat-icon>
-            </button>
-            <div class="hidden items-center md:flex ml-auto">
-                <a [routerLink]="['/auth/login']" mat-raised-button color="warn"
-                    class="text-lg font-bold py-2 px-5">Login</a>
-                <a [routerLink]="['/auth/signup']" mat-raised-button color="accent"
-                    class="text-lg font-bold py-2 px-5 ml-2">Register</a>
                 class="_sidenav__toggler ml-auto md:ml-1 ms-sm-3" mat-icon-button>
                 <mat-icon>menu</mat-icon>
             </button>
