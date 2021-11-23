@@ -7,7 +7,7 @@ import {HttpClient} from '@angular/common/http';
 export class UserprofileService {
 
   constructor(private httpClient:HttpClient) { }
-  getProfile(){
+  postProfile(){
     return this.httpClient.get('https://backend-store-api.herokuapp.com/api/userprofiles/');
   }
   

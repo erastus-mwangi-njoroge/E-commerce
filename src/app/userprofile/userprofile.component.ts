@@ -16,10 +16,10 @@ export class UserprofileComponent implements OnInit {
     setTimeout(() => {
       this.isLoaded = true
     }, 8000)
-    this.getProfile();
+    this.postProfile();
   }
-  getProfile() {
-      this.UserprofileService.getProfile().subscribe(data => {
+  postProfile() {
+      this.UserprofileService.postProfile().subscribe(data => {
     this.userprofiles = data;
     this.userprofiles = this.userprofiles.results
     console.log(this.userprofiles);
