@@ -2,6 +2,7 @@ import { Component, OnInit,ViewChild } from '@angular/core';
 import { LoginService } from 'src/app/login.service';
 import { NgForm } from '@angular/forms';
 import { Userlogin } from 'src/app/userlogin';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'll-login',
@@ -11,7 +12,7 @@ import { Userlogin } from 'src/app/userlogin';
 export class LoginComponent implements OnInit {
 
  
-  constructor(private login:LoginService) { }
+  constructor(private login:LoginService,private router:Router) { }
 
   ngOnInit(): void {
   }
@@ -28,6 +29,7 @@ export class LoginComponent implements OnInit {
           .createUserlogin(new Userlogin(username,password))
           .subscribe((data) => {
             console.log(data);
+            this.router.navigate(['/']);
           });
        
       }

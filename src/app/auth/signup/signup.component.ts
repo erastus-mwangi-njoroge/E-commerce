@@ -2,6 +2,7 @@ import { Component, OnInit , ViewChild} from '@angular/core';
 import { SignupService } from 'src/app/signup.service';
 import { NgForm } from '@angular/forms';
 import { User } from 'src/app/user';
+import { Router } from '@angular/router'; 
 
 @Component({
   selector: 'll-signup',
@@ -10,7 +11,7 @@ import { User } from 'src/app/user';
 })
 export class SignupComponent implements OnInit {
 
-  constructor(private signup:SignupService) { }
+  constructor(private signup:SignupService, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -27,11 +28,11 @@ export class SignupComponent implements OnInit {
 
     this.signup
       .createUser(new User(username,email,password,password2,first_name,last_name))
-      .subscribe((data) => {
-        console.log(data);
-      });
+      .subscribe((data) => this.router.navigate(['/auth/login'], { 'queryParams': data })
+       );
    
   }
+  
 }
 
 

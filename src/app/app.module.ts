@@ -11,12 +11,14 @@ import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 import { HttpClientModule } from '@angular/common/http';
 import { SearchproductsComponent } from './searchproducts/searchproducts.component';
 import { UserprofileComponent } from './userprofile/userprofile.component';
-import { CategoriessearchComponent } from './categoriessearch/categoriessearch.component';
+
 
 @NgModule({
   declarations: [AppComponent, SearchproductsComponent, UserprofileComponent, CategoriessearchComponent],
   imports: [BrowserModule,FormsModule, AppRoutingModule, BrowserAnimationsModule, SharedModule, NgxSkeletonLoaderModule,HttpClientModule, ],
-  providers: [],
+  providers: [
+    AuthenticationService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
