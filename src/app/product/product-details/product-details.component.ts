@@ -31,7 +31,7 @@ export class ProductDetailsComponent implements OnInit {
 
       console.log(res);
     });
-    alert('Enter Your mpesa pin on your phone to confirm payment');
+    alert('Hello!Thank you for choosing One_click store.Your products are being processed');
   }
 }
 

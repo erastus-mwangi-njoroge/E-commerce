@@ -1,4 +1,4 @@
-<header class="ll_header" [class.top-fixed]="topFixed" [ngClass]="{ 'bg-gray-50 shadow': topFixed && isScrolled }">
+<!-- <header class="ll_header" [class.top-fixed]="topFixed" [ngClass]="{ 'bg-gray-50 shadow': topFixed && isScrolled }">
     <div class="container">
         <div class="inner-header">
             <div class="row">
@@ -10,7 +10,7 @@
             </div>
         </div>
     </div>
-    <div class="nav-item">
+    <!-- <div class="nav-item">
         <div class="container">
             <div class="nav-depart">
                 <div class="depart-btn">
@@ -24,11 +24,11 @@
 
                     </ul>
                 </div>
-            </div>
-            <div id="mobile-menu-wrap"></div>
-        </div>
-    </div>
-</header>
+            </div> -->
+            <!-- <div id="mobile-menu-wrap"></div> -->
+        <!-- </div>
+    </div> -->
+<!-- </header> -->
 <header class="ll_header" [class.top-fixed]="topFixed" [ngClass]="{ 'bg-gray-50 shadow': topFixed && isScrolled }">
     <div class="container">
         <div class="flex items-center">
@@ -57,16 +57,16 @@
                 
                
                     <a *ngIf="!loggedin()" [routerLink]="['/auth/signup']" mat-raised-button color="accent"
-               class="text-lg font-bold mx-3">Register</a>
+               class="text-lg font-bold mx-3" [hidden]="!f.loggedin" >Register</a>
                
 
                
                    <a *ngIf="!loggedin()" [routerLink]="['/auth/login']" mat-raised-button color="warn"
-               class="text-lg font-bold ">Login</a>
+               class="text-lg font-bold "[hidden]="!f.loggedin" >Login</a>
                
               
                 <a *ngIf="loggedin()" (click)="onlogout()" [routerLink]="['/auth/logout']" mat-raised-button color="warn"
-                class="text-lg font-bold ">Logout</a>
+                class="text-lg font-bold " []="!f.loggedin" >Logout</a>
              
               
            </div>
