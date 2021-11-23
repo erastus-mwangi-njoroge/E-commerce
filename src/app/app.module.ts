@@ -14,10 +14,9 @@ import { UserprofileComponent } from './userprofile/userprofile.component';
 
 
 @NgModule({
-  declarations: [AppComponent, SearchproductsComponent, UserprofileComponent, CategoriessearchComponent],
+  declarations: [AppComponent, SearchproductsComponent, UserprofileComponent],
   imports: [BrowserModule,FormsModule, AppRoutingModule, BrowserAnimationsModule, SharedModule, NgxSkeletonLoaderModule,HttpClientModule, ],
   providers: [
-    AuthenticationService
   ],
   bootstrap: [AppComponent]
 })
