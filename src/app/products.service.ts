@@ -23,10 +23,12 @@ export class ProductsService {
     return this.http.post('https://backend-store-api.herokuapp.com/api/products-search/', { data });
   }
   postsendconfirmationsms(phone_number, message) {
-    return this.http.post('https://backend-store-api.herokuapp.com/send_message/', {
-      phone_number: phone_number,
-      message: message
-    });
+    return this.http.post('https://backend-store-api.herokuapp.com/send_message/',
+      {
+        phone_number: phone_number
+        , message: message
+      });
+ 
   }
 
   postsendconfirmationemail(email, message, subject) {
