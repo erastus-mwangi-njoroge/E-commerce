@@ -35,7 +35,7 @@ export class HeaderComponent implements OnInit {
   }
   onlogout() {
     localStorage.removeItem('token');
-    // this.router.navigate(['/login']);
+    this.router.navigateByUrl('/');
   }
 
   addsearchproducts(form: NgForm) {
