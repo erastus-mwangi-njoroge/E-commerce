@@ -1,4 +1,3 @@
-import { AuthenticationService } from 'src/app/authentication.service';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { Component, EventEmitter, HostListener, Input, OnInit, Output } from '@angular/core';
 import { menuList as staticMenuList } from '../../data/menus';
@@ -17,7 +16,7 @@ export class HeaderComponent implements OnInit {
   isScrolled: boolean;
   menuList = [];
   isLessThenLargeDevice;
-  constructor(private breakpointObserver: BreakpointObserver, private productservice: ProductsService,private router:Router, private authenticationService:AuthenticationService) { }
+  constructor(private breakpointObserver: BreakpointObserver, private productservice: ProductsService,private router:Router) { }
 
   ngOnInit(): void {
     this.menuList = staticMenuList;
