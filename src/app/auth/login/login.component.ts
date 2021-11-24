@@ -29,8 +29,14 @@ export class LoginComponent implements OnInit {
           .createUserlogin(new Userlogin(username,password))
           .subscribe((data) => {
             console.log(data);
+            // localStorage.setItem('token' ,data:Object);
+            // console.log(data);
             this.router.navigate(['/']);
           });
+          localStorage.setItem('token',username);
+          console.log(localStorage.getItem('token'));
+          localStorage.setItem('token',password);
+          console.log(localStorage.getItem('token'));
        
       }
       
