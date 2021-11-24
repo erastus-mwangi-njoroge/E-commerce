@@ -66,7 +66,7 @@
                
               
                 <a *ngIf="loggedin()" (click)="onlogout()" [routerLink]="['/auth/logout']" mat-raised-button color="warn"
-                class="text-lg font-bold " >Logout</a>
+                class="text-lg font-bold " [show]="!f.loggedin" >Logout</a>
              
               
            </div>
