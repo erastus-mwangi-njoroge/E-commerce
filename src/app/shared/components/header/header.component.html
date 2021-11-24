@@ -57,16 +57,16 @@
                 
                
                     <a *ngIf="!loggedin()" [routerLink]="['/auth/signup']" mat-raised-button color="accent"
-               class="text-lg font-bold mx-3" [hidden]="!f.loggedin" >Register</a>
+               class="text-lg font-bold mx-3"  >Register</a>
                
 
                
                    <a *ngIf="!loggedin()" [routerLink]="['/auth/login']" mat-raised-button color="warn"
-               class="text-lg font-bold "[hidden]="!f.loggedin" >Login</a>
+               class="text-lg font-bold ">Login</a>
                
               
                 <a *ngIf="loggedin()" (click)="onlogout()" [routerLink]="['/auth/logout']" mat-raised-button color="warn"
-                class="text-lg font-bold " []="!f.loggedin" >Logout</a>
+                class="text-lg font-bold " >Logout</a>
              
               
            </div>
